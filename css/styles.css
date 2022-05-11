@@ -1,0 +1,12 @@
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+#text {
+  color: green;
+}
