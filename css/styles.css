@@ -1,10 +1,50 @@
+:root {
+  --main-btn-color: #ffffff;
+  --second-btn-color: #303030;
+  --main-title-color: #ffffff;
+  --second-title-color: #303030;
+  --accent-color: #ff6c00;
+  --lh: 1.33;
+  --typical-margin: 20px;
+  --main-font: "Open Sans", Arial, sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+/* a {
+  color: currentColor;
+} */
+
 body {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: var(--main-font);
   line-height: 1.71;
 }
 
 .header {
   background-color: gray;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .list {
@@ -15,14 +55,41 @@ body {
   text-decoration: none;
 }
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* ---------------HEADER---------------- */
+
 .header-link,
 .header-tel {
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.33;
+  line-height: var(--lh);
   letter-spacing: 0.1em;
   color: #ffffff;
   line-height: 1.71;
+}
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
 }
 
 /* .header-tel {
@@ -39,5 +106,267 @@ body {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--main-btn-color);
+}
+
+/* ---------------HERO---------------- */
+
+.hero-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+
+.hero-link:hover {
+  color: var(--accent-color);
+}
+
+.hero-content {
+  background-color: #303033;
+  padding: 272px 0 206px 96px;
+}
+
+.hero-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--typical-margin);
+}
+
+.hero-title {
+  font-family: "Raleway", Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: var(--main-title-color);
+  margin-bottom: var(--typical-margin);
+}
+.hero-after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+  max-width: 400px;
+}
+
+/* ---------------ABOUT---------------- */
+
+.about {
+  padding-top: 139px;
+  padding-bottom: 92px;
+}
+
+.about-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303030;
+  margin-bottom: var(--typical-margin);
+}
+.about-title {
+  font-family: "Raleway", Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.67;
+  letter-spacing: 0.05em;
+  color: var(--second-btn-color);
+  margin-bottom: var(--typical-margin);
+}
+.about-after-title {
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-bottom: var(--typical-margin);
+}
+.about-text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-bottom: 40px;
+}
+
+.about-btn {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: var(--second-btn-color);
+}
+
+/* ---------------PRICES---------------- */
+
+.prices {
+  background-color: #303030;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.prices-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--typical-margin);
+}
+.prices-title {
+  font-family: "Raleway", Verdana, sans-serif;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: var(--main-title-color);
+  margin-bottom: 44px;
+}
+.prices-list {
+  border: 1px solid #ffffff;
+  padding: 30px 40px;
+}
+
+.prices-item {
+  margin-bottom: var(--typical-margin);
+}
+.prices-item-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.prices-btn {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--main-btn-color);
+  margin: 0 auto;
+  display: block;
+}
+
+/* ---------------BRNRFitS---------------- */
+
+.benefits {
+  padding-top: 143px;
+  padding-bottom: 137px;
+}
+
+.benefits-item {
+  width: 170px;
+  height: 133px;
+  border: 1px solid #000000;
+  padding: 20px 24px;
+}
+.benefits-count {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #303030;
+  display: block;
+}
+.benefits-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+  color: #303030;
+}
+
+.benefits-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303030;
+  margin-bottom: var(--typical-margin);
+}
+
+.benefits-title {
+  font-family: "Raleway", Verdana, sans-serif;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: var(--second-title-color);
+  margin-bottom: var(--typical-margin);
+}
+
+.benefits-after-title {
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+/* ---------------MASTER---------------- */
+
+.master {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.master-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303030;
+  margin-bottom: var(--typical-margin);
+}
+
+.master-title {
+  font-family: "Raleway", Verdana, sans-serif;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: var(--second-title-color);
+  margin-bottom: 44px;
+}
+
+.master-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #303030;
+  margin-top: 30px;
+  margin-bottom: 8px;
+}
+
+.master-item-text {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--accent-color);
+}
+
+/* ---------------GaLLERY---------------- */
+
+.gallery-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303030;
+  margin-bottom: var(--typical-margin);
 }
