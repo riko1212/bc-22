@@ -38,13 +38,6 @@ img {
 
 body {
   font-family: var(--main-font);
-  line-height: 1.71;
-}
-
-.header {
-  background-color: gray;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .list {
@@ -60,7 +53,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
 }
 
 .visually-hidden {
@@ -88,6 +80,12 @@ body {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  transition: background-color 300ms linear, color 300ms linear;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
 }
 
 .pre-title {
@@ -119,6 +117,13 @@ body {
 
 /* ---------------HEADER---------------- */
 
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .header-logo {
   margin-right: 70px;
 }
@@ -144,6 +149,7 @@ body {
   letter-spacing: 0.1em;
   color: #ffffff;
   line-height: 1.71;
+  transition: color 300ms linear;
 }
 .header-link:hover,
 .header-link:focus {
@@ -170,8 +176,31 @@ body {
   display: flex;
 }
 
-.hero-list {
+.hero-soc {
   width: 93px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 24px;
+  padding-bottom: 40px;
+}
+
+.hero-list {
+  display: flex;
+  transform: rotate(-90deg) translate(-19px);
+  transform-origin: top left;
+  align-items: center;
+}
+
+.hero-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  margin-right: 40px;
+}
+
+.hero-item + .hero-item {
+  margin-left: 40px;
 }
 .hero-link {
   font-weight: 600;
@@ -179,6 +208,7 @@ body {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+  transition: color 300ms linear;
 }
 
 .hero-link:hover {
@@ -484,6 +514,44 @@ body {
   width: calc(100% / 3 - 30px);
   width: calc((100% - 90px) / 3);
   margin-left: 30px;
+}
+
+.master-item:hover .master-top-text {
+  transform: translateY(0);
+}
+
+.master-top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.master-top-text {
+  position: absolute;
+  width: 100%;
+  font-size: 18px;
+  top: 0;
+  color: #ffffff;
+  line-height: 1.5;
+  padding: 40px;
+  background-color: rgba(255, 106, 0, 0.495);
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+  overflow: auto;
+}
+
+.master-top-text::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+.master-top-text::-webkit-scrollbar-track {
+  background: orange; /* color of the tracking area */
+}
+
+.master-top-text::-webkit-scrollbar-thumb {
+  background-color: blue; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid orange; /* creates padding around scroll thumb */
 }
 
 /* .master-item {
