@@ -28,10 +28,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <a
-          href=""
-          class="header-logo animate__animated animate__bounce animate__infinite infinite"
-        >
+        <a href="" class="header-logo">
           <img src="./img/logo.svg" alt="лого сайта" />
         </a>
 
@@ -286,7 +283,7 @@
       </section>
       <section class="gallery">
         <div class="container">
-          <p class="pre-title gallery-pre-title">
+          <p class="pre-title gallery-pre-title" title="+380(96) 111-11-11">
             На латинском языке “барба” означает “борода”
           </p>
           <h2 class="visually-hidden">Галерея</h2>
@@ -391,11 +388,105 @@
       </div>
     </main>
     <footer></footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           X
         </button>
+        <p class="modal-title">Заголовок модального вікна</p>
+        <form>
+          <label class="modal-label"
+            >Ваше імя
+            <input
+              type="text"
+              class="modal-input"
+              name="user-name"
+              placeholder="Джон"
+              required
+              minlength="2"
+            />
+          </label>
+          <div class="modal-field">
+            <label for="user-email" class="modal-label">Ваша пошта</label>
+            <div class="modal-field-wrap">
+              <input
+                type="email"
+                class="modal-input"
+                name="user-email"
+                id="user-email"
+                placeholder="test@mail.ua"
+              />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./img/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <input
+            type="tel"
+            class="modal-input"
+            name="user-tel"
+            placeholder="+380(96) 111-11-11"
+            title="+380(96) 111-11-11"
+            required
+            pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+            value="+380"
+          />
+          <div class="modal-field">
+            <label for="user-text" class="modal-label">Ваша пошта</label>
+            <textarea
+              name="user-text"
+              id="user-text"
+              class="modal-text"
+              placeholder="Коммент"
+            ></textarea>
+          </div>
+          <div class="modal-field">
+            <input
+              type="checkbox"
+              name="privacy"
+              id="privacy"
+              value="privacy"
+              class="modal-check visually-hidden"
+            />
+            <label for="privacy" class="check-text"
+              ><span
+                ><svg class="check-icon" width="11" height="8">
+                  <use href="./img/icons.svg#icon-check"></use></svg
+              ></span>
+              Політика користування</label
+            >
+          </div>
+          <!-- <fieldset class="modal-field">
+            <legend>Size</legend>
+            <label for="big-size">Big</label>
+            <input type="radio" id="big-size" name="size" value="big" />
+            <label for="small-size">Small</label>
+            <input
+              type="radio"
+              id="small-size"
+              name="size"
+              value="small"
+              checked
+            />
+          </fieldset>
+          <fieldset class="modal-field">
+            <legend>add</legend>
+            <label for="cheese">cheese</label>
+            <input type="checkbox" id="cheese" name="add" value="cheese" />
+            <label for="tomato">tomato</label>
+            <input type="checkbox" id="tomato" name="add" value="tomato" />
+          </fieldset>
+
+          <div class="modal-field">
+            <label for="city">Місто</label>
+            <select name="city" id="city" class="modal-input">
+              <option value="london">London</option>
+              <option value="paris" selected>Paris</option>
+              <option value="Noviy Rozdil">Noviy Rozdil</option>
+            </select>
+          </div> -->
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -405,3 +496,5 @@
     <script src="./js/modal.js"></script>
   </body>
 </html>
+
+?user-name=Name &user-email=test%40mail.ua& user-tel=%28096%29111-11-11
