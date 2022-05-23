@@ -847,12 +847,109 @@ body {
 .check-text {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .check-icon {
   fill: transparent;
 }
 
+/* .check-text::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #999999;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.check-text::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 25px;
+  background-color: #bdbec1;
+  border-radius: 5px 5px 2px 2px;
+  left: 6px;
+  top: -14px;
+  transition: transform 300ms;
+  transform: rotate(-45deg);
+  transform-origin: bottom;
+}
+
+.modal-check:checked + .check-text::after {
+  transform: rotate(45deg);
+  background-color: rgb(236, 228, 228);
+}
+
+.modal-check:checked + .check-text::before {
+  background-color: #abe6b3;
+} */
+
+/* ----------------------------------------- */
+
+/* .check-text::before {
+  content: "";
+  width: 60px;
+  height: 5px;
+  background-color: #999999;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.check-text::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 25px;
+  background-color: #bdbec1;
+  border-radius: 5px 5px 2px 2px;
+  left: 2px;
+  top: -7px;
+  transition: transform 300ms;
+}
+
+.modal-check:checked + .check-text::after {
+  transform: translate(42px);
+  background-color: rgb(236, 228, 228);
+}
+
+.modal-check:checked + .check-text::before {
+  background-color: #abe6b3;
+} */
+
+/* -------------------------------------- */
+/* 
+.check-text::before {
+  content: "";
+  width: 40px;
+  height: 22px;
+  border: 1px solid rgba(153, 153, 153, 0.541);
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.check-text::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #bdbec1;
+  border-radius: 50%;
+  left: 2px;
+  top: 2px;
+  transition: transform 300ms;
+}
+
+.modal-check:checked + .check-text::after {
+  transform: translate(18px);
+  background-color: #ffffff;
+}
+
+.modal-check:checked + .check-text::before {
+  background-color: #abe6b3;
+} */
+/* ---------------------------------------- */
 .check-text span {
   width: 16px;
   height: 15px;
