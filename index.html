@@ -18,12 +18,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <a href="" class="header-logo">
+        <a
+          href=""
+          class="header-logo animate__animated animate__bounce animate__infinite infinite"
+        >
           <img src="./img/logo.svg" alt="лого сайта" />
         </a>
 
@@ -45,7 +53,9 @@
           <a href="tel:+380441111111" class="header-tel link"
             >+38 044 111 11 11</a
           >
-          <button type="button" class="btn header-btn">онлайн-запись</button>
+          <button type="button" class="btn header-btn" data-modal-open>
+            онлайн-запись
+          </button>
         </div>
       </div>
     </header>
@@ -67,7 +77,9 @@
             <p lang="en" class="pre-title hero-pre-title">
               A hair salon for men in Kyiv
             </p>
-            <h1 lang="en" class="hero-title">BarberShop</h1>
+            <h1 lang="en" class="hero-title" data-aos="flip-left">
+              BarberShop
+            </h1>
             <p class="hero-after-title">
               Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
               и со вкусом.
@@ -97,7 +109,9 @@
           </ul>
           <div class="about-content">
             <p class="pre-title about-pre-title">О нас</p>
-            <h2 class="about-title title">Лучший Барбершоп твоего города</h2>
+            <h2 class="about-title title" data-aos="fade-up-left">
+              Лучший Барбершоп твоего города
+            </h2>
             <p class="about-after-title">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
@@ -118,7 +132,7 @@
           <p class="pre-title prices-pre-title">
             Проведи время в компании лучших мастеров
           </p>
-          <h2 class="prices-title title">Услуги и цены</h2>
+          <h2 class="prices-title title" data-aos="fade-down">Услуги и цены</h2>
           <div class="prices-wrap">
             <ul class="prices-list prices-list-light list">
               <li class="prices-item">
@@ -186,7 +200,14 @@
             <p class="pre-title benefits-pre-title">
               старая традиционная школа
             </p>
-            <h2 class="benefits-title title">Почему приходят именно к нам?</h2>
+            <h2
+              class="benefits-title title"
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
+              Почему приходят именно к нам?
+            </h2>
             <p class="benefits-after-title">
               О нас говорят только хорошее. Но лучше 1 раз увидеть и
               прочувствовать, чем 10 раз прочитать.
@@ -199,7 +220,7 @@
           <p class="pre-title master-pre-title">
             для настоящих ценителей атмосферы
           </p>
-          <h2 class="master-title title">Наши мастера</h2>
+          <h2 class="master-title title" data-aos="zoom-in-up">Наши мастера</h2>
           <ul class="master-list list">
             <li class="master-item">
               <div class="master-top-wrap">
@@ -337,7 +358,50 @@
           </ul>
         </div>
       </section>
+      <div class="contact-wrap">
+        <div class="container">
+          <section class="online">
+            <h2 class="online-title title">Онлайн-запись</h2>
+          </section>
+          <section class="contacts">
+            <h2 class="contacts-title title">Контакты</h2>
+            <address class="contacts-address">
+              <ul class="contacts-list list">
+                <li class="contacts-item">
+                  <a href="" class="contacts-link link"
+                    >ул. Васильковая, 7А Киев, 08132</a
+                  >
+                </li>
+                <li class="contacts-item">
+                  <a href="tel:+380441111111" class="contacts-link link"
+                    >+38 044 111 11 11</a
+                  >
+                </li>
+                <li class="contacts-item">
+                  <a href="mailto:barbershop@email.com" class="contacts-link"
+                    >barbershop@email.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <p class="contacts-subtitle pre-title">время работы</p>
+            <p class="contacts-time">Ежедневно с 9:00 до 22:00</p>
+          </section>
+        </div>
+      </div>
     </main>
     <footer></footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          X
+        </button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
