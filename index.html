@@ -359,6 +359,42 @@
         <div class="container">
           <section class="online">
             <h2 class="online-title title">Онлайн-запись</h2>
+            <form class="online-form">
+              <div class="online-form-wrap">
+                <div class="online-field">
+                  <input
+                    type="text"
+                    class="online-input"
+                    name="online-name"
+                    id="online-name"
+                    required
+                    placeholder=" "
+                  />
+                  <label for="online-name" class="online-label">Имя*</label>
+                </div>
+                <div class="online-field">
+                  <input
+                    type="tel"
+                    class="online-input"
+                    name="online-tel"
+                    id="online-tel"
+                    required
+                    placeholder=" "
+                  />
+                  <label for="online-tel" class="online-label">Телефон*</label>
+                </div>
+              </div>
+              <div class="text-field">
+                <textarea
+                  name="online-text"
+                  id="online-text"
+                  placeholder=" "
+                  class="online-text"
+                ></textarea>
+                <label for="online-text" class="online-label">сообщение</label>
+              </div>
+              <button type="submit" class="btn online-btn">отправить</button>
+            </form>
           </section>
           <section class="contacts">
             <h2 class="contacts-title title">Контакты</h2>
@@ -388,7 +424,7 @@
       </div>
     </main>
     <footer></footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           X
@@ -496,5 +532,3 @@
     <script src="./js/modal.js"></script>
   </body>
 </html>
-
-?user-name=Name &user-email=test%40mail.ua& user-tel=%28096%29111-11-11
