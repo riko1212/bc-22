@@ -24,33 +24,35 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <a href="" class="header-logo">
+        <a href="" class="logo header__logo">
           <img src="./img/logo.svg" alt="лого сайта" />
         </a>
-
-        <ul class="header-list list">
-          <li class="header-item">
-            <a href="" class="header-link link">О нас</a>
-          </li>
-          <li class="header-item">
-            <a href="" class="header-link link">Услуги и цены</a>
-          </li>
-          <li class="header-item">
-            <a href="#masters" class="header-link link">Мастера</a>
-          </li>
-          <li class="header-item">
-            <a href="" class="header-link link">Контакты</a>
-          </li>
-        </ul>
-        <div class="header-connect">
-          <a href="tel:+380441111111" class="header-tel link"
+        <nav class="navigation">
+          <ul class="menu list">
+            <li class="menu__item">
+              <a href="" class="menu__link link">О нас</a>
+            </li>
+            <li class="menu__item">
+              <a href="" class="menu__link link">Услуги и цены</a>
+            </li>
+            <li class="menu__item">
+              <a href="#masters" class="menu__link link">Мастера</a>
+            </li>
+            <li class="menu__item">
+              <a href="" class="menu__link link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="connect header__connect">
+          <a href="tel:+380441111111" class="connect__tel link"
             >+38 044 111 11 11</a
           >
-          <button type="button" class="btn header-btn" data-modal-open>
+          <button type="button" class="btn connect__btn" data-modal-open>
             онлайн-запись
           </button>
         </div>
@@ -59,25 +61,32 @@
     <main>
       <section class="hero">
         <div class="container">
-          <div class="hero-soc">
-            <ul class="hero-list list">
-              <li class="hero-item">
-                <a href="" target="_blank" class="hero-link link">Instagram</a>
+          <div class="soc">
+            <ul class="soc-list hero__soc-list list">
+              <li class="soc-list__item">
+                <a href="" target="_blank" class="soc-list__link link"
+                  >Instagram</a
+                >
               </li>
-              <li class="hero-item">
-                <a href="" target="_blank" class="hero-link link">Youtube</a>
+              <li class="soc-list__item">
+                <a href="" target="_blank" class="soc-list__link link"
+                  >Youtube</a
+                >
               </li>
             </ul>
           </div>
 
           <div class="hero-content">
-            <p lang="en" class="pre-title hero-pre-title">
+            <p
+              lang="en"
+              class="pre-title hero-content__pre-title pre-title--color-light"
+            >
               A hair salon for men in Kyiv
             </p>
-            <h1 lang="en" class="hero-title" data-aos="flip-left">
+            <h1 lang="en" class="hero-content__title" data-aos="flip-left">
               BarberShop
             </h1>
-            <p class="hero-after-title">
+            <p class="hero-content__after-title">
               Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
               и со вкусом.
             </p>
@@ -87,7 +96,7 @@
       <section class="about">
         <div class="container">
           <ul class="about-list list">
-            <li class="about-item">
+            <li class="about-list__item">
               <img
                 src="./img/about-img-1.jpeg"
                 alt="барбер бреет бороду"
@@ -95,7 +104,7 @@
                 height="445"
               />
             </li>
-            <li class="about-item">
+            <li class="about-list__item">
               <img
                 src="./img/about-img-2.jpeg"
                 alt="барбер бреет шею"
@@ -105,22 +114,29 @@
             </li>
           </ul>
           <div class="about-content">
-            <p class="pre-title about-pre-title">О нас</p>
-            <h2 class="about-title title" data-aos="fade-up-left">
+            <p class="pre-title about-content__pre-title pre-title--color-dark">
+              О нас
+            </p>
+            <h2
+              class="about-content__title title title--dark"
+              data-aos="fade-up-left"
+            >
               Лучший Барбершоп твоего города
             </h2>
-            <p class="about-after-title">
+            <p class="about-content__after-title">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
             </p>
-            <p class="about-text">
+            <p class="about-content__text">
               Мы команда, которая никогда не останавливается на достигнутом и
               жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
               никогда не сможешь быть прежним. Мы команда, которая всегда с
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button type="button" class="btn about-btn">онлайн-запись</button>
+            <button type="button" class="btn about-content__btn">
+              онлайн-запись
+            </button>
           </div>
         </div>
       </section>
