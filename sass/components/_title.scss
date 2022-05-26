@@ -4,8 +4,7 @@
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
-}
-
-.title--dark {
-  color: var(--second-title-color);
+  &--dark {
+    color: var(--second-title-color);
+  }
 }

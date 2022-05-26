@@ -2,12 +2,22 @@
 @import "./base/reset";
 @import "./base/common";
 @import "./utils/hidden";
+@import "./utils/plaseholders";
+@import "./utils/mixins";
 
 @import "./components/container";
 @import "./components/btn";
 @import "./components/pre-title";
 @import "./components/title";
+@import "./components/modal";
 
 @import "./layout/header";
 @import "./layout/hero";
 @import "./layout/about";
+@import "./layout/prices";
+@import "./layout/benefits";
+@import "./layout/masters";
+@import "./layout/gallery";
+@import "./layout/contact-wrap";
+@import "./layout/online";
+@import "./layout/contacts";

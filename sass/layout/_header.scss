@@ -1,17 +1,16 @@
-header {
+.header {
   position: absolute;
   width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
+  .container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__logo {
   margin-right: 70px;
-}
-
-.header .container {
-  display: flex;
-  align-items: center;
 }
 
 .menu {
@@ -31,11 +30,12 @@ header {
   color: #ffffff;
   line-height: 1.71;
   transition: color 300ms linear;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
-.menu__link:hover,
-.menu__link:focus {
-  color: var(--accent-color);
-}
+
 .header__connect {
   margin-left: auto;
 }
