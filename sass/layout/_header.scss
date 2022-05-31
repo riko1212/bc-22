@@ -3,7 +3,7 @@
   width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
-  .container {
+  > .container {
     display: flex;
     align-items: center;
   }
@@ -11,6 +11,10 @@
 
 .header__logo {
   margin-right: 70px;
+}
+
+.navigation {
+  display: none;
 }
 
 .menu {
@@ -38,6 +42,7 @@
 
 .header__connect {
   margin-left: auto;
+  display: none;
 }
 
 /* .header-tel {
@@ -50,4 +55,100 @@
 .connect__btn {
   color: var(--main-btn-color);
   margin-left: 40px;
+}
+
+.menu-open-btn {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+}
+
+.menu-open-icon {
+  fill: #ffffff;
+}
+
+.mob-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.mob-menu-list__item,
+.mob-soc-list__item {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+.mob-menu-list__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+
+.mob-connect {
+  margin-bottom: 64px;
+}
+.mob-connect__tel {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+
+.mob-connect__btn {
+  color: var(--second-btn-color);
+  display: block;
+  margin-top: 24px;
+}
+.mob-soc-list {
+  padding-left: 100px;
+  position: relative;
+}
+
+.mob-soc-list::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  display: block;
+}
+
+.mob-soc-list__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+.no-scroll {
+  overflow: hidden;
 }

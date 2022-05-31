@@ -1,13 +1,26 @@
 .hero .container {
   display: flex;
+  width: 100%;
+  padding: 0;
+  @include tablet {
+    width: 720px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include desktop {
+    width: 1200px;
+  }
 }
 
 .soc {
   width: 93px;
-  display: flex;
+  display: none;
   align-items: flex-end;
   padding-left: 24px;
   padding-bottom: 40px;
+  @include tablet {
+    display: flex;
+  }
 }
 
 .soc-list {
@@ -43,16 +56,63 @@
 
 .hero-content {
   background-color: #303033;
-  padding: 272px 0 206px 96px;
+  // padding: 272px 0 206px 96px;
+  padding: 208px 15px 183px 15px;
   flex-grow: 1;
   background-image: linear-gradient(
       rgba(25, 28, 38, 0.2),
       rgba(25, 28, 38, 0.2)
     ),
-    url(../img/hero-bg.jpeg);
+    url(../img/hero-bg-mob.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(../img/hero-bg-mob-2x.jpeg);
+  }
+  @include mobile {
+    padding: 208px 31px 183px 31px;
+  }
+  @include tablet {
+    padding: 280px 70px 234px 70px;
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(../img/hero-bg-tab.jpeg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)
+        ),
+        url(../img/hero-bg-tab-2x.jpeg);
+    }
+  }
+  @include desktop {
+    padding: 272px 0 206px 96px;
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(../img/hero-bg.jpeg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)
+        ),
+        url(../img/hero-bg-2x.jpeg);
+    }
+  }
 }
 
 .hero-content__pre-title {
@@ -62,29 +122,44 @@
 .hero-content__title {
   font-family: "Raleway", Verdana, sans-serif;
   font-weight: 700;
-  font-size: 72px;
-  line-height: 1.18;
+  font-size: 44px;
+  line-height: calc(56 / 48);
   letter-spacing: 0.05em;
   color: var(--main-title-color);
   margin-bottom: var(--typical-margin);
   display: flex;
   align-items: baseline;
-  &::before {
-    content: "";
-    width: 40px;
-    height: 40px;
-    background-color: #ffffff;
-    border-radius: 50%;
+  @include mobile {
+    font-size: 48px;
   }
-  &::after {
-    content: "";
+  @include desktop {
+    font-size: 72px;
+    line-height: 1.17;
   }
+  // &::before {
+  //   content: "";
+  //   width: 40px;
+  //   height: 40px;
+  //   background-color: #ffffff;
+  //   border-radius: 50%;
+  // }
+  // &::after {
+  //   content: "";
+  // }
 }
 
 .hero-content__after-title {
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 16px;
+  line-height: 1.62;
   letter-spacing: 0.02em;
   color: #9da4bd;
-  max-width: 400px;
+  max-width: 306px;
+  @include tablet {
+    max-width: 349px;
+  }
+  @include desktop {
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
