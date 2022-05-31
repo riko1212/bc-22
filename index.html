@@ -149,24 +149,54 @@
           </div>
         </div>
       </section>
-      <!-- <section class="about">
+      <section class="about">
         <div class="container">
           <ul class="about-list list">
             <li class="about-list__item">
-              <img
-                src="./img/about-img-1.jpeg"
-                alt="барбер бреет бороду"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/about-img-1.jpeg    1x,
+                    ./img/about-img-1-2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/about-img-1-tab.jpeg    1x,
+                    ./img/about-img-1-tab-2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  src="./img/about-img-1-tab.jpeg "
+                  alt="барбер бреет бороду"
+                />
+              </picture>
             </li>
             <li class="about-list__item">
-              <img
-                src="./img/about-img-2.jpeg"
-                alt="барбер бреет шею"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/about-img-2.jpeg    1x,
+                    ./img/about-img-2-2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/about-img-2-tab.jpeg    1x,
+                    ./img/about-img-2-tab-2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  src="./img/about-img-2-tab.jpeg "
+                  alt="барбер бреет бороду"
+                />
+              </picture>
             </li>
           </ul>
           <div class="about-content">
@@ -195,8 +225,8 @@
             </button>
           </div>
         </div>
-      </section> -->
-      <!-- <section class="prices">
+      </section>
+      <section class="prices">
         <div class="container">
           <p class="pre-title prices-pre-title">
             Проведи время в компании лучших мастеров
@@ -242,7 +272,7 @@
           </div>
           <button type="button" class="btn prices-btn">онлайн-запись</button>
         </div>
-      </section> -->
+      </section>
       <!-- <section class="benefits">
         <div class="container">
           <div class="benefits-blocks">
@@ -395,6 +425,15 @@
                 alt="барбер стрижет клиента"
                 width="270"
                 height="360"
+                srcset="
+                  ./img/gallery-img-2.jpeg        270w,
+                  ./img/gallery-img-2-2x.jpeg     540w,
+                  ./img/gallery-img-2-tab.jpeg    330w,
+                  ./img/gallery-img-2-tab-2x.jpeg 660w,
+                  ./img/gallery-img-2-mob.jpeg    418w,
+                  ./img/gallery-img-2-mob-2x.jpeg 836w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 320px) 100vw"
               />
             </li>
             <li class="gallery-item">
