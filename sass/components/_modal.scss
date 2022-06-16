@@ -54,21 +54,31 @@
   font-size: 14px;
   color: #555555;
   outline: none;
-  &:invalid {
-    border-color: red;
-  }
-  &:invalid::placeholder {
-    color: red;
-  }
-  &:valid {
-    border-color: green;
-  }
-  &::placeholder {
-    color: teal;
-  }
-  &:focus {
-    border-color: var(--accent-color);
-  }
+  // &:invalid {
+  //   border-color: red;
+  // }
+  // &:invalid::placeholder {
+  //   color: red;
+  // }
+  // &:valid {
+  //   border-color: green;
+  // }
+  // &::placeholder {
+  //   color: teal;
+  // }
+  // &:focus {
+  //   border-color: var(--accent-color);
+  // }
+}
+
+.modal-input:invalid {
+  border: 1px solid red;
+}
+.modal-input:placeholder-shown {
+  border: 1px solid #999999;
+}
+.modal-input:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .modal-field {

@@ -204,20 +204,17 @@ body {
   color: #555555;
   outline: none;
 }
+
 .modal-input:invalid {
-  border-color: red;
+  border: 1px solid red;
 }
-.modal-input:invalid::placeholder {
-  color: red;
+
+.modal-input:placeholder-shown {
+  border: 1px solid #999999;
 }
-.modal-input:valid {
-  border-color: green;
-}
-.modal-input::placeholder {
-  color: teal;
-}
+
 .modal-input:focus {
-  border-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 .modal-field {
